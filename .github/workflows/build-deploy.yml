@@ -13,7 +13,7 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: 10
-    - run: npm ci
+    - run: npm install
     - run: gulp build-prod
     - uses: JamesIves/github-pages-deploy-action@v4
       with:
