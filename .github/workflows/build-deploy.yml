@@ -15,7 +15,6 @@ jobs:
         node-version: 10
     - run: npm ci
     - run: gulp build-prod
-    - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
+    - uses: JamesIves/github-pages-deploy-action@v4
+      with:
           folder: dist
