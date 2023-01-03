@@ -1,21 +1,57 @@
 @import "reset";
 @import "brands";
-@import "mosaic";
 
 $fontRegular: 400;
 $fontBold: 700;
 
+$headerFont: 'Open Sans', sans-serif;
+
+$backgroundColor: #191816;
+
 $blueColor: #58ABE1;
 $whiteColor: #FFFFFF;
-$grayBackgroundColor: #F6F6F6;
+$lighterBackgroundColor: #212121;
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'PT Serif', serif;
   font-weight: $fontRegular;
+  background-color: $backgroundColor;
+  color: $whiteColor;
+  line-height: 1.4;
 }
 
 b {
   font-weight: $fontBold;
+}
+
+header {
+  font-family: $headerFont;
+  margin: 40px 60px;
+
+  @media (max-width: 850px) {
+    margin: 10px;
+  }
+
+
+  h1 {
+    font-size: 50px;
+    display: inline;
+    background-image: url('/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: rgba($color: #000000, $alpha: 0);
+  }
+
+  .location {
+    float: right;
+    display: block;
+    margin-top: 10px;
+
+    @media (max-width: 500px) {
+      float: none;
+    }
+  }
 }
 
 .page-container {
@@ -24,397 +60,48 @@ b {
   margin: 0 auto;
 }
 
-header {
-  width: 100%;
-  height: 400px;
-  min-height: 50vh;
-  background-image: url('/images/header-background.jpg');
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  background-size: cover;
-  position: fixed;
-  background-position: bottom;
-  z-index: -100;
-
-  .title-wrapper {
-    padding-top: 10vh;
-    width: 80%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  img {
-    height: 50vh;
-  }
-
-  .title-container {
-    background-color: rgba(#000, 0.7);
-    display: table;
-    padding: 20px;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    left: auto;
-    right: auto;
-  }
-
-  h1 {
-    font-weight: $fontBold;
-    text-transform: uppercase;
-    font-size: 55px;
-    color: $whiteColor;
-    border-bottom: solid 4px $whiteColor;
-    display: block;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 26px;
-    color: $whiteColor;
-    padding-top: 30px;
-    line-height: 1.5;
-    text-align: center;
-    width: 100%;
-  }
-
-  .johnwheal-photo {
-    //background-image: url('/images/johnwheal.png');
-    width: 600px;
-    height: 70vh;
-    box-sizing: border-box;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    bottom: 15vh;
-    right: 5vw;
-  }
-
-  @media (max-width: 1000px) {
-    .johnwheal-photo {
-      width: 450px;
-    }
-  }
-
-  @media (max-width: 850px) {
-    .johnwheal-photo {
-      display: none;
-    }
-  }
-
-  @media (max-width: 800px) {
-    .menu {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    padding-left: 0;
-  }
-  
-  @media (max-width: 500px) {
-    text-align: center;
-  }
+.title {
+  text-align: center;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+  font-size: 36px;
 }
 
-.views {
-  background-color: $blueColor;
-  padding: 20px 0;
+.about-me {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 15vh;
 
-  h6 {
-    text-align: center;
-    font-size: 22px;
-    color: $whiteColor;
-    line-height: 1.5;
-  }
-}
-
-.padding {
-  height: 400px;
-  min-height: 50vh;
-}
-
-.about {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  background-color: white;
-
-  .photo {
-    max-width: 400px;
-    width: 100%;
-    display: inline-block;
-
-    img {
-      width: 100%;
-    }
+  h3 {
+    font-size: 36px;
+    text-decoration: underline;
+    margin-bottom: 40px;
   }
 
-  .description {
-    max-width: 600px;
-    width: 100%;
-    display: inline-block;
-    margin-left: 100px;
-    position: relative;
-    transform: translateY(-35%);
-
-    p {
-      font-size: 18px;
-      line-height: 1.5;
-      margin: 40px 0;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .description {
-      margin-left: 20px;
-    }
-  }
-
-  @media (max-width: 1100px) {
-    .description {
-      width: calc(100% - 450px);
-    }
-  }
-
-  @media (max-width: 900px) {
-    .description {
-      transform: none;
-      vertical-align: top;
-    }
-  }
-
-  @media (max-width: 800px) {
-    .photo {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .description {
-      transform: none;
-      width: 100%;
-      text-align: center;
-      margin-left: 0;
-    }
-  }
-}
-
-.amazing-everyday {
-  background-image: url('/images/amazing-everyday.jpg');
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-
-  h4 {
-    color: $whiteColor;
-    font-size: 40px;
-    padding: 70px;
-    line-height: 1.5;
-    max-width: 600px;
-    box-sizing: border-box;
-  }
-
-  .button {
-    margin-left: 70px;
-    color: $whiteColor;
-    font-weight: $fontBold;
-    text-decoration: none;
-    border: solid 4px $whiteColor;
-    padding: 20px 60px;
-    font-size: 28px;
-    transition: all 250ms;
-
-    &:hover {
-      transition: all 250ms;
-      color: $blueColor;
-      background-color: $whiteColor;
-    }
-  }
-
-  @media (max-width: 800px) {
-    h4 {
-      width: 100%;
-      text-align: center;
-      max-width: 100%;
-      font-size: 32px;
-    }
-
-    .button {
-      margin-left: auto;
-      display: block;
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 500px) {
-    h4 {
-      padding: 70px 0;
-    }
-  }
-}
-
-.section {
-  padding: 70px 0;
-
-  h2 {
-    font-size: 48px;
-    text-transform: uppercase;
-    font-weight: $fontBold;
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  .line {
-    height: 4px;
-    width: 150px;
-    background-color: $blueColor;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  p {
-    margin-top: 60px;
-    text-align: center;
-    max-width: 550px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-}
-
-.born-to-engineer {
-  background-color: white;
-  
-  img {
-    max-height: 200px;
-    max-width: 100%;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-@media (max-width: 850px) {
-  .born-to-engineer h2 {
+  li {
     font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
   }
 }
 
-.investments {
-  background-color: $grayBackgroundColor;
-
-  img {
-    max-height: 200px;
-    max-width: 100%;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-.the-wheal-group {
+.paper {
   width: 100%;
-  background-image: url('/images/the-wheal-group-background.jpg');
-  width: 100%;
-  height: 500px;
+  height: 100px;
+  background-image: url('/images/paper.png');
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-
-  img {
-    max-width: 700px;
-    width: 90%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 100px;
-  }
-
-  .button {
-    color: $whiteColor;
-    font-weight: $fontBold;
-    text-decoration: none;
-    border: solid 4px $whiteColor;
-    padding: 20px 60px;
-    font-size: 28px;
-    transition: all 250ms;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 50px;
-    text-align: center;
-    width: 200px;
-
-    &:hover {
-      transition: all 250ms;
-      color: black;
-      background-color: $whiteColor;
-    }
-  }
-}
-
-.highlights {
-  padding-bottom: 0;
-  background-color: white;
-
-  #myMosaic {
-    display: block;
-    margin-top: 60px;
-    float: none;
-  }
-}
-
-#instagram {
-  margin-top: 50px;
-
-  .post-thumbnail {
-    width: 33%;
-    box-sizing: border-box;
-    padding: 30px;
-    display: inline-block;
-
-    img {
-      width: 100%;
-      max-height: 366px;
-    }
-  }
-
-  @media (max-width: 950px) {
-    .post-thumbnail {
-      max-width: 640px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      width: 100%;
-
-      img {
-        max-height: inherit;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    .post-thumbnail {
-      padding: 10px;
-    }
-  }
 }
 
 .social-media {
-  background-color: $blueColor;
+  background-color: $lighterBackgroundColor;
+  padding: 40px;
 
   h2 {
     color: $whiteColor;
+    font-size: 36px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    text-align: center;
   }
 
   .line {
@@ -442,15 +129,5 @@ header {
         opacity: 0.7;
       }
     }
-  }
-}
-
-footer {
-  background-color: $grayBackgroundColor;
-  padding: 20px 0;
-
-  .copyright {
-    text-align: center;
-    font-size: 18px;
   }
 }
