@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/css/style.css?v={TIMESTAMP}" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.mosaic.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </head>
 <body>
     <header>
@@ -49,12 +49,31 @@
             <li>I work for NATS ✈️ (UK air traffic control) </li>
             <li>I am a Principal System Architect - accountable for the architecture/design of all the UK's flight data systems 🛫</li>
             <li>I am a Chartered Engineer (CEng) with the IET 🚀</li>
-            <li>I have a Masters degree in Computer Engineering from the University of Portsmouth 🎓</li>
+            <li>I hold a Masters degree in Computer Engineering from the University of Portsmouth 🎓</li>
+            <li>My GMAT Focus score is 665, with a 99th percentile in Data Insights 📚</li>
             <li>I invest in early-stage start-up companies 📈</li>
             <li>In my spare time I enjoy climbing 🧗‍♂️ and running 🏃</li>
         </ul>
     </div>
     <div class="paper"></div>
+    <div class="apps">
+        <div class="page-container">
+            <h2>My favourite apps:</h2>
+            <div class="grid">
+                <div class="grid-item"><a href="https://www.blinkist.com"><img src="/images/apps/blinkist.png" alt="Blinkist" /></a></div>
+                <div class="grid-item"><a href="https://www.strava.com"><img src="/images/apps/strava.png" alt="Strava" /></a></div>
+                <div class="grid-item"><a href="https://culturedcode.com/things/"><img src="/images/apps/things.png" alt="Gmail" /></a></div>
+                <div class="grid-item"><a href="https://www.audible.co.uk"><img src="/images/apps/audible.png" alt="Audible" /></a></div>
+                <div class="grid-item"><a href="https://dayoneapp.com"><img src="/images/apps/day-one.png" alt="Day One" /></a></div>
+                <div class="grid-item"><a href="https://brilliant.org"><img src="/images/apps/brilliant.png" alt="Brilliant" /></a></div>
+                <div class="grid-item"><a href="https://www.economist.com"><img src="/images/apps/economist.png" alt="Economist" /></a></div>
+                <div class="grid-item"><a href="https://www.ted.com"><img src="/images/apps/ted.png" alt="TED" /></a></div>
+                <div class="grid-item"><a href="https://www.strong.app"><img src="/images/apps/strong.png" alt="Strong" /></a></div>
+                <div class="grid-item"><a href="https://www.formula1.com"><img src="/images/apps/f1.png" alt="F1" /></a></div>
+                <div class="grid-item"><a href="https://gritapp.net"><img src="/images/apps/grit.png" alt="Grit" /></a></div>
+              </div>
+        </div>
+    </div>
     <div class="social-media">
         <div class="page-container">
             <h2>Where I can be found online:</h2>
@@ -62,9 +81,15 @@
                 <li><a href="https://uk.linkedin.com/in/johnwheal" class="fab fa-linkedin"></a></li>
                 <li><a href="https://www.github.com/johnwheal" class="fab fa-github-square"></a></li>
                 <li><a href="https://www.instagram.com/johnwheal" class="fab fa-instagram"></a></li>
-                <li><a href="https://www.twitter.com/johnwheal" class="fab fa-twitter-square"></a></li>
+                <li><a href="https://www.strava.com/athletes/johnwheal" class="fab fa-strava"></a></li>
             </ul>
         </div>
     </div>
+    <script>
+        $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+        }).isotope('shuffle');
+    </script>
 </body>
 </html>

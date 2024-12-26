@@ -112,7 +112,22 @@ header {
   background-size: cover;
 }
 
-.social-media {
+.apps {
+  .grid-item {
+    img {
+      margin: 10px;
+      border-radius: 25px;
+      width: 120px;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s, filter 0.2s;
+    }
+    }
+  }
+}
+
+.social-media, .apps {
   background-color: $lighterBackgroundColor;
   padding: 40px;
 
